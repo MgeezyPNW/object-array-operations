@@ -8,4 +8,4 @@
 
 ### I use a Windows operating system, and I have not found a way to run my functions in vscode. That is why you see an index.html file in each built-in method. Run liveserver from the html file, and run the functions in your console.
 
-### This is a rough draft at this point. You will see this change over time as I grow. I imagine this growing into a data-structures and algorithms repo, as my learning extends past objects and arrays. Any feedback would be fantastic! 
+### This is a rough draft at this point. You will see this change over time as I grow. I imagine this growing into a data-structures and algorithms repo, as my learning extends past objects and arrays. Any feedback would be fantastic! And please, someone remind me to branch...

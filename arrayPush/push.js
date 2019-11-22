@@ -38,6 +38,8 @@ function simplifiedPush(animal) {
 }
 
 
+
+
 // What is it's Big O for time and space? 
 // The Big O here is O(1) for time. This is because we are just accessing the array when we append something to it. This is constant time. We aren't reindexing (moving values already in the array) any values. We are just creating a new index and placing a value there.
 // The Big O for space is O(n). In our push() function, the array grows larger each time we add a new element. As the array grows larger, it will take up more space in the memory.  

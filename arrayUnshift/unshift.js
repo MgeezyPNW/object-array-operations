@@ -17,9 +17,14 @@ friends.unshift('Bailey', 'Thomas');
 let books = ['Tools of Titans', 'Tribe of Mentors', '4 Hour Work Week', '4 Hour Chef', '4 Hour Body'];
 
 function unshift(array, element) {
-  array.length = array.length + 1; 
-  for(let i=array.length; i<0; i--) {
-    array[i - 1] = array[i];
-  }
-  console.log(array);
+  templateArray = [];
+  templateArray.length = array.length + 1;
+  templateArray[0] = element;
+  for (let i = 0; i < array.length; i++) {
+    templateArray[i + 1] = array[i];
+  };
+  array = templateArray;
+  return array.length;
 };
+
+// above is a working solution for an input of an array and one element. Many more edge cases to tackle. 

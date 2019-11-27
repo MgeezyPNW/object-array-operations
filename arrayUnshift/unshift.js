@@ -29,4 +29,4 @@ function unshift(array, ...element) {
   return array.length;
 }
 
-// above is a working solution for an input of an array and one element. Many more edge cases to tackle. 
+// the solution above is working code for returning the length of the new array, and prepennding the second array on the first. This does not, however, mutate the array. I learned that spread operators are immutable

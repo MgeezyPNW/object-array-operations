@@ -14,19 +14,13 @@ friends.unshift('Bailey', 'Thomas');
 // Should return 6
 // Friends becomes ['Bailey', 'Thomas', 'Kate', 'Cole', 'Austin', 'Chewy'];
 
-function push(array, element) {
-  array[array.length] = element;
-  return array;
-}
-
 function unshift(array, ...element) {
-  let prepenned = [];
   for (let i = 0; i < element.length; i++) {
-    push(prepenned, element[i]);
+    array[i + element.length] = array[i];
+    array[i] = element[i];
   }
-  array = [...prepenned, ...array];
-  console.log(array);
   return array.length;
-}
+};
 
-// the solution above is working code for returning the length of the new array, and prepennding the second array on the first. This does not, however, mutate the array. I learned that spread operators are immutable
+// This function here should be my final draft for unshift. This is the best and most efficient version of unshift(); I could come up with. 
+// Further thoughts would be about application. Array.unshift(); does not type check. For example, if an array were added in as an element, then that would count as one element. What about an application where this unshift function were to type check, so that if an array were passed in as an argument, it would return an the length of an array if each element of said array were made as separate elements of the greater array? (Remind me to refactor what I just said into actual english)

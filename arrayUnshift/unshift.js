@@ -14,17 +14,19 @@ friends.unshift('Bailey', 'Thomas');
 // Should return 6
 // Friends becomes ['Bailey', 'Thomas', 'Kate', 'Cole', 'Austin', 'Chewy'];
 
-let books = ['Tools of Titans', 'Tribe of Mentors', '4 Hour Work Week', '4 Hour Chef', '4 Hour Body'];
+function push(array, element) {
+  array[array.length] = element;
+  return array;
+}
 
-function unshift(array, element) {
-  templateArray = [];
-  templateArray.length = array.length + 1;
-  templateArray[0] = element;
-  for (let i = 0; i < array.length; i++) {
-    templateArray[i + 1] = array[i];
-  };
-  array = templateArray;
+function unshift(array, ...element) {
+  let prepenned = [];
+  for (let i = 0; i < element.length; i++) {
+    push(prepenned, element[i]);
+  }
+  array = [...prepenned, ...array];
+  console.log(array);
   return array.length;
-};
+}
 
 // above is a working solution for an input of an array and one element. Many more edge cases to tackle. 

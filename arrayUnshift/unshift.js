@@ -22,6 +22,5 @@ function unshift(array, ...element) {
   return array.length;
 };
 
-
 // This function here should be my final draft for unshift. This is the best and most efficient version of unshift(); I could come up with. 
 // Further thoughts would be about application. Array.unshift(); does not type check. For example, if an array were added in as an element, then that would count as one element. What about an application where this unshift function were to type check, so that if an array were passed in as an argument, it would return an the length of an array if each element of said array were made as separate elements of the greater array? (Remind me to refactor what I just said into actual english)

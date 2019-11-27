@@ -14,19 +14,13 @@ friends.unshift('Bailey', 'Thomas');
 // Should return 6
 // Friends becomes ['Bailey', 'Thomas', 'Kate', 'Cole', 'Austin', 'Chewy'];
 
-function push(array, element) {
-  array[array.length] = element;
-  return array;
-}
-
 function unshift(array, ...element) {
-  let prepenned = [];
   for (let i = 0; i < element.length; i++) {
-    push(prepenned, element[i]);
+    array[i + element.length] = array[i];
+    array[i] = element[i];
   }
-  array = [...prepenned, ...array];
-  console.log(array);
   return array.length;
-}
+};
 
-// above is a working solution for an input of an array and one element. Many more edge cases to tackle. 
+
+// This function here should be my final draft for unshift. I figured unshift out by working on concatenation. I will dive more into why this functio nworks in a later post. I need to figure out how to handle different types of elements. 

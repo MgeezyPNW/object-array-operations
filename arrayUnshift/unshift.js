@@ -10,17 +10,16 @@
 
 let friends = ['Kate', 'Cole', 'Austin', 'Chewy'];
 
-friends.unshift('Bailey', 'Thomas');
+// friends.unshift('Bailey', 'Thomas');
 // Should return 6
 // Friends becomes ['Bailey', 'Thomas', 'Kate', 'Cole', 'Austin', 'Chewy'];
 
 function unshift(array, ...element) {
-  for (let i = 0; i < element.length; i++) {
-    array[i + element.length] = array[i];
-    array[i] = element[i];
+  let array3 = [...element, ...array];
+  for (let i = 0; i < array3.length; i++) {
+    array[i] = array3[i];
   }
   return array.length;
 };
 
-// This function here should be my final draft for unshift. This is the best and most efficient version of unshift(); I could come up with. 
-// Further thoughts would be about application. Array.unshift(); does not type check. For example, if an array were added in as an element, then that would count as one element. What about an application where this unshift function were to type check, so that if an array were passed in as an argument, it would return an the length of an array if each element of said array were made as separate elements of the greater array? (Remind me to refactor what I just said into actual english)
+// So, I learned that I way over thought this problem. I had tried to solve it originally with the spread operator, but I scrapped that route because I learned that spread operators are immutable, meaning they wont mutate the original array. After a couple nights of trying to figure out my way around this, I came to a realization: I can create aninstance of the combined array using spread operators within the scope of the function, and then assign each index location along the original array equal to the combined array. Try it out! It is late and I am tired. I will do my normal walkthrough and clean up the grammar tomorrow. 
